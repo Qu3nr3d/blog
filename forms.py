@@ -13,7 +13,6 @@ class CreatePostForm(FlaskForm):
     submit = SubmitField("Submit Post")
 
 
-# TODO: Create a RegisterForm to register new users
 class RegisterForm(FlaskForm):
     email = EmailField('email', validators=[DataRequired()])
     login = StringField('login', validators=[DataRequired()])
@@ -21,7 +20,6 @@ class RegisterForm(FlaskForm):
     submit = SubmitField('Register')
 
 
-# TODO: Create a LoginForm to login existing users
 
 
 class LogInForm(FlaskForm):
@@ -29,7 +27,6 @@ class LogInForm(FlaskForm):
     password = PasswordField('password', validators=[DataRequired()])
     submit = SubmitField('Log in')
 
-# TODO: Create a CommentForm so users can leave comments below posts
 
 
 class CommentForm(FlaskForm):
