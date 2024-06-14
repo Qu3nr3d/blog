@@ -35,13 +35,11 @@ def admin_only(function):
 def load_user(user_id):
     return db.get_or_404(User, user_id)
 
-# CONNECT TO DB
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DB_URI')
 db = SQLAlchemy()
 db.init_app(app)
 
 
-# CONFIGURE TABLES
 class BlogPost(db.Model):
     __tablename__ = "blog_posts"
     id = db.Column(db.Integer, primary_key=True)
